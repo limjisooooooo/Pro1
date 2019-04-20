@@ -6,8 +6,27 @@
         <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.4.0.min.js')}}"></script>
         <script>
             $('body').ready(function(){
-                $('li').click(function(){
-                    $('.cont').append($(this).text());
+                $(document).on("click", "li", function(){
+                    var dir = "Contents/" + $(this).text()
+                    $.ajax({
+                        url: "getDir",
+                        method: "POST",
+                        data: {"dir": dir},
+                        success: function(data){
+                            $('.cont').empty()
+                            for (i = 0; i < data.length; i++)
+                                $('.cont').append(data[i]);
+                        }
+                    });
+                });
+                $.ajax({
+                    url: "getDir",
+                    method: "POST",
+                    data: {"dir": "Contents"},
+                    success: function(data){
+                        for (i = 0; i < data.length; i++)
+                            $('ul').append("<li>" + data[i] + "</li>");
+                    }
                 });
             });
         </script>
@@ -15,20 +34,14 @@
     </head>
     <body>
         <div class="title">
-            <h1>
-                Resize this panel to see grids response
-            </h1>
+            <h1>Personal Server</h1>
         </div>
         <hr>
-        <div class="cont">
+        <div>
             <ul>
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
-                <li>D</li>
-                <li>E</li>
-                <li>F</li>
             </ul>
+        </div>
+        <div class="cont">
         </div>
     </body>
 </html>
