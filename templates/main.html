@@ -7,7 +7,7 @@
         <script>
             $('body').ready(function(){
                 $(document).on("click", "li", function(){
-                    var dir = "Contents/" + $(this).text()
+                    var dir = "Contents/" + $(this).text() + "/"
                     $.ajax({
                         url: "getDir",
                         method: "POST",
@@ -15,7 +15,7 @@
                         success: function(data){
                             $('.cont').empty()
                             for (i = 0; i < data.length; i++)
-                                $('.cont').append(data[i]);
+                                $('.cont').append("<a href='" + dir + data[i] + "'>" + data[i] + "</a>");
                         }
                     });
                 });
