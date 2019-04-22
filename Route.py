@@ -1,7 +1,11 @@
+#-*- coding:utf-8 -*-
 
-from flask import Flask, render_template, Response
-from flask_restful import Api
+import sys
+sys.path.insert(0, '/Users/limjisoo/PycharmProjects/Pro1')
+
+from flask import Flask, render_template
 from BackEnd import *
+from flask_restful import Api
 
 app = Flask(__name__)
 api = Api(app)

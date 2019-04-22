@@ -1,9 +1,7 @@
 from flask_restful import Api, Resource, reqparse
 from flask import Flask, Response
-import json
 import os
-
-from pymysql import *
+#from pymysql import *
 import json
 
 app = Flask(__name__)
@@ -23,11 +21,12 @@ class getDir(Resource):
             l.append(val)
         return Response(json.dumps(l, ensure_ascii=False).encode('utf8'), content_type='application/json; charset=utf-8')
         """
+        root = "/Users/limjisoo/PycharmProjects/Pro1/"
         parser = reqparse.RequestParser()
         parser.add_argument('dir', type=str)
         args = parser.parse_args()
         dir = args['dir']
-        l = os.listdir(dir)
+        l = os.listdir(root + dir)
         l.sort(reverse=True)
         return Response(json.dumps(l, ensure_ascii=False).encode('utf8'), content_type='application/json; charset=utf-8')
 

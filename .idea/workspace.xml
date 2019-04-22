@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e9dce52-e8c2-4433-9f63-315967aba146" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application.wsgi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Route.py" beforeDir="false" afterPath="$PROJECT_DIR$/Route.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,32 +19,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Route.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BackEnd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding>
-                <element signature="e#1#51#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackEnd.py">
+        <entry file="file://$PROJECT_DIR$/application.wsgi">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
+            <state relative-caret-position="225">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -72,16 +82,18 @@
       <list>
         <option value="$PROJECT_DIR$/static/css/layout.css" />
         <option value="$PROJECT_DIR$/getDir.py" />
+        <option value="$PROJECT_DIR$/BackEnd/__init__.py" />
+        <option value="$PROJECT_DIR$/application.wsgi" />
         <option value="$PROJECT_DIR$/Route.py" />
-        <option value="$PROJECT_DIR$/BackEnd.py" />
         <option value="$PROJECT_DIR$/templates/main.html" />
+        <option value="$PROJECT_DIR$/BackEnd.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="161" />
-    <option name="y" value="63" />
-    <option name="width" value="1237" />
+    <option name="x" value="275" />
+    <option name="y" value="23" />
+    <option name="width" value="1142" />
     <option name="height" value="771" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -102,18 +114,7 @@
             <path>
               <item name="Pro1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="Contents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pro1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="Contents" type="462c0819:PsiDirectoryNode" />
-              <item name="영화" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pro1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pro1" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -126,6 +127,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -202,11 +205,19 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="335" y="36" width="1237" height="771" extended-state="0" />
-    <editor active="true" />
+    <frame x="275" y="23" width="1142" height="771" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28289473" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36663693" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -215,10 +226,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911634" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3298969" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49917763" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50082237" side_tool="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3298969" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -226,6 +237,32 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/getDir.py" />
+    <entry file="file://$PROJECT_DIR$/d.wsgi" />
+    <entry file="file://$PROJECT_DIR$/BackEnd/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/mod_wsgi/server/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Route.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -233,40 +270,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getDir.py">
+    <entry file="file://$PROJECT_DIR$/application.wsgi">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Route.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <element signature="e#1#51#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
+        <state relative-caret-position="225">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
