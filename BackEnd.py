@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from flask_restful import Api, Resource, reqparse
 from flask import Flask, Response
 import os
@@ -21,14 +22,17 @@ class getDir(Resource):
             l.append(val)
         return Response(json.dumps(l, ensure_ascii=False).encode('utf8'), content_type='application/json; charset=utf-8')
         """
-        root = "/Users/limjisoo/PycharmProjects/Pro1/"
+        root = "/home/ubuntu/Pro1/"
         parser = reqparse.RequestParser()
         parser.add_argument('dir', type=str)
         args = parser.parse_args()
         dir = args['dir']
-        l = os.listdir(root + dir)
-        l.sort(reverse=True)
-        return Response(json.dumps(l, ensure_ascii=False).encode('utf8'), content_type='application/json; charset=utf-8')
+        tmp = os.listdir(root + dir.encode().decode('ascii','surrogateescape'))
+        tmp.sort(reverse=True)
+        l = list()
+        for val in tmp:
+            l.append(val.encode('ascii','surrogateescape').decode())
+        return Response(json.dumps(l), content_type='application/json; charset=utf-8')
 
 if __name__=='__main__':
     app.run('0.0.0.0', '80')
