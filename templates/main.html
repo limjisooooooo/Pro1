@@ -2,27 +2,72 @@
 <html lang="ko-kr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="{{url_for('static', filename='css/layout.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/layout.css')}}?version={{now}}"/>
         <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.4.0.min.js')}}"></script>
         <script>
             $('body').ready(function(){
-                $(document).on("click", "li", function(){
-                    var dir = "./Contents/" + $(this).text() + "/"
-                    $.ajax({
-                        url: "getDir",
+                $(document).on("click", "h1", function(){
+                    location.href="";
+                });
+                $(document).on("click", ".item", function(){    //아이템 선택 시 동작...
+                    var path = $(this).children('input[name="path"]').val()
+                    $.ajax({    //파일을 읽어온다
+                        url: "getFile",
                         method: "POST",
-                        data: {"dir": dir},
+                        data: {"path": path},
+                        success: function(data){
+                            if (data.mime_type == 'Directory') {    //파일이 아니라 디렉토리일 때 동작
+                                path = data.res + '/'
+                                $.ajax({
+                                    url: "getItem",
+                                    method: "POST",
+                                    data: {"path": path},
+                                    success: function(data2){
+                                        $('.cont').empty()
+                                        for (i = 0; i < data2.length; i++){
+                                            $('.cont').append("<div class='item'>\
+                                                                    <div class='img'>\
+                                                                        <img src='data:image/png;base64," + data2[i].img + "'/>\
+                                                                    </div>\
+                                                                    <p>" + data2[i].fname + "</p>\
+                                                                    <input type='hidden' name='path' value=" + data2[i].path + ">\
+                                                                </div>");
+                                        }   //  for End
+                                    }   //success End
+                                }); //getItem ajax End
+                            }
+                            else {
+                                $('.cont').empty()
+                                $('.cont').append(data.res)
+                            }
+                        }   //success End
+                    }); //ajax End
+                }); //click End
+
+                $(document).on("click", "li", function(){   //메뉴 클릭 시 동작
+                    var path = "Contents/" + $(this).text() + "/"
+                    $.ajax({
+                        url: "getItem",
+                        method: "POST",
+                        data: {"path": path},
                         success: function(data){
                             $('.cont').empty()
-                            for (i = 0; i < data.length; i++)
-                                $('.cont').append("<a href='" + dir + data[i] + "'>" + data[i] + "</a>");
-                        }
-                    });
-                });
+                            for (i = 0; i < data.length; i++){
+                                $('.cont').append("<div class='item'>\
+                                                        <div class='img'>\
+                                                            <img src='data:image/png;base64," + data[i].img + "'/>\
+                                                        </div>\
+                                                        <p>" + data[i].fname + "</p>\
+                                                        <input type='hidden' name='path' value=" + data[i].path + ">\
+                                                    </div>");
+                            }   //  for End
+                        }   //success End
+                    }); //ajax End
+                }); //click End
                 $.ajax({
-                    url: "getDir",
+                    url: "getMenu",
                     method: "POST",
-                    data: {"dir": "Contents"},
+                    data: {"path": "Contents"},
                     success: function(data){
                         for (i = 0; i < data.length; i++)
                             $('ul').append("<li>" + data[i] + "</li>");
